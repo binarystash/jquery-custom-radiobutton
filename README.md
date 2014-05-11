@@ -28,9 +28,9 @@ In your webpage:
 1. Suppose you have the following.
 	
 	```html
-	<input type="radio" id="first"/><label for="first">First</label>
-    <label><input id="second" type="radio"/>Second</label>
-    <input id="third" type="radio"/><label>Third</label>
+	<input name="number" type="radio" id="first"/><label for="first">First</label>
+    <label><input name="number" id="second" type="radio"/>Second</label>
+    <input name="number" id="third" type="radio"/><label>Third</label>
     ```
 
 2. Call the plugin.
