@@ -1,0 +1,28 @@
+{
+  "name": "custom-radiobutton",
+  "title": "Custom Radiobutton",
+  "description": "Custom Radiobutton is a jQuery plugin for customizing the appearance of radiobuttons",
+  "version": "1.0.0",
+  "homepage": "https://github.com/binarystash/jquery-custom-radiobutton.git",
+  "author": {
+    "name": "BinaryStash",
+    "url": "https://github.com/binarystash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binarystash/jquery-custom-radiobutton.git"
+  },
+  "bugs": "",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.8.3"
+  },
+  "keywords": [
+    "jquery-plugin"
+  ]
+}

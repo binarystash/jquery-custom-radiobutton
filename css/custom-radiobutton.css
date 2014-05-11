@@ -1,0 +1,20 @@
+.custom-radiobutton {
+	display:none;
+}
+
+.custom-radiobutton-display {
+	display:inline-block;
+	margin:0 5px;
+	cursor:pointer;
+}
+
+.custom-radiobutton-display:before {
+	content:'\25CF';
+	color:#C2C2C2;
+	font-size:20px;
+	text-shadow:#545454 1px 1px 2px;
+}
+
+.custom-radiobutton-display.checked:before {
+	color:#e7a61a;
+}
