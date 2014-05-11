@@ -31,7 +31,7 @@ Download the [production version][min] or the [development version][max].
 
 	```javascript
 	jQuery(function($) {
-	  $('input[type="radio"]'').customRadiobutton();
+	  $('input[type="radio"]').customRadiobutton();
 	});
 	```
 
