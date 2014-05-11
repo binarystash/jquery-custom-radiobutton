@@ -1,11 +1,6 @@
-/*
- * Custom Radiobutton
- * 
- *
- * Copyright (c) 2014 BinaryStash
- * Licensed under the MIT license.
- */
-
+/*! custom-radiobutton - v1.0.0 - 2014-05-11
+* https://github.com/binarystash/custom-radiobutton
+* Copyright (c) 2014 BinaryStash; Licensed MIT */
 (function ($) {
 
   function handleClick(actual,dummy) {
