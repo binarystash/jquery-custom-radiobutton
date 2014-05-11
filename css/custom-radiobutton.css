@@ -16,5 +16,6 @@
 }
 
 .custom-radiobutton-display.checked:before {
+	content:'\25CF ';
 	color:#e7a61a;
 }
