@@ -1,15 +1,21 @@
+[![Build Status](https://travis-ci.org/binarystash/jquery-custom-radiobutton.svg?branch=master)](https://travis-ci.org/binarystash/jquery-custom-radiobutton)
+
 # Custom Radiobutton
 
 Custom Radiobutton is a jQuery plugin for customizing the appearance of radiobuttons
 
-## Getting Started
+## Demo
+
+Play with a [fiddle](http://jsfiddle.net/binarystash/YvYt3/).
+
+## Installation
 
 Download the [production version][min] or the [development version][max].
 
 [min]: https://raw.github.com/binarystash/jquery-custom-radiobutton/master/dist/jquery.custom-radiobutton.min.js
 [max]: https://raw.github.com/binarystash/jquery-custom-radiobutton/master/dist/jquery.custom-radiobutton.js
 
-## Installation
+In your webpage:
 
 ```html
 <script src="jquery.js"></script>
@@ -27,12 +33,10 @@ Download the [production version][min] or the [development version][max].
     <input id="third" type="radio"/><label>Third</label>
     ```
 
-2. Call the plugin
+2. Call the plugin.
 
 	```javascript
-	jQuery(function($) {
-	  $('input[type="radio"]').customRadiobutton();
-	});
+	jQuery('input[type="radio"]').customRadiobutton();
 	```
 
 3. Customize the appearance by editing custom-radiobutton.css
