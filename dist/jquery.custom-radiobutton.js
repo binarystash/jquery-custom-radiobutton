@@ -1,59 +1,50 @@
-/*! custom-radiobutton - v1.0.0 - 2014-05-11
+/*! custom-radiobutton - v1.0.1 - 2015-02-14
 * https://github.com/binarystash/custom-radiobutton
-* Copyright (c) 2014 BinaryStash; Licensed MIT */
+* Copyright (c) 2015 BinaryStash; Licensed MIT */
 (function ($) {
 
-  function handleClick(actual,dummy) {
-      
-    var name = actual.attr("name");
+	$.fn.customRadiobutton = function() {
 
-    $("input[name='"+name+"']").next('.custom-radiobutton-display').removeClass('checked');
+		return this.each( function(i,v) {
 
-    dummy.addClass("checked");
+			$(v).addClass("custom-radiobutton");
 
-    actual.prop("checked",true);
+			//Ensure that a radio-button element was passed
+			if ( !$(v).is(':radio') ) {
+				return false;         
+			}
 
-  }
+			//Add classes
+			$(v).addClass("custom-radiobutton");
 
-  $.fn.customRadiobutton = function() {
+			//If not wrapped within label tags, wrap it
+			var parentLabel = $(v).parent("label");
+			var withinLabel = parentLabel.length;
 
-    return this.each( function(i,v) {
+			if ( !withinLabel ){
+				$(v).wrap("<label>");      
+			} 
 
-      $(v).addClass("custom-radiobutton");
+			//Create dummy radio-button
+			var dummy = $("<span class='custom-radiobutton-display'></span>");
+			$(v).after(dummy);
+			if ( $(v).prop("checked") ) {
+				dummy.addClass("checked");    
+			}
 
-      //Ensure that a radio-button element was passed
-      if ( !$(v).is(':radio') ) {
-        return false;         
-      }
+			//Add/remove classes to radio-buttons whenever state changes
+			$(v).change( function(e) {
 
-      //Add classes
-      $(v).addClass("custom-radiobutton");
+				var radiobutton = $(e.currentTarget);
+				var name = radiobutton.attr("name");
 
-      //Create dummy radio-button
-      $(v).after("<span class='custom-radiobutton-display'></span>");
-      var dummy = $(v).next('.custom-radiobutton-display');
+				$("input[name='"+name+"']").next('.custom-radiobutton-display').removeClass('checked');
+				radiobutton.next('.custom-radiobutton-display').addClass("checked");
 
-      //Check for label
-      var id = $(v).attr("id");
-      var parentLabel = $(v).parent("label");
-      var withinLabel = parentLabel.length;
-      var label = withinLabel ? parentLabel : $("label[for='"+id+"']");
+			});
 
-      //Add events
-      label.click( function(e) {
-        e.preventDefault();
-        handleClick($(v),dummy);
-      });
+		});
 
-      if ( !withinLabel ) {
-        dummy.click( function(e) {
-          e.stopPropagation();
-          handleClick($(v),dummy);
-        });
-      }
-
-    });
-
-  };
+	};
 
 }(jQuery));
