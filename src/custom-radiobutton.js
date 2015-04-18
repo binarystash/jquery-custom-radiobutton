@@ -34,7 +34,7 @@
 			var dummy = $("<span class='custom-radiobutton-display'></span>");
 			$(v).after(dummy);
 			if ( $(v).prop("checked") ) {
-				dummy.addClass("checked");    
+				dummy.addClass("custom-radiobutton-checked custom-radiobutton-checked-default");
 			}
 
 			//Add/remove classes to radio-buttons whenever state changes
@@ -42,10 +42,28 @@
 
 				var radiobutton = $(e.currentTarget);
 				var name = radiobutton.attr("name");
+				var containerForm = $(e.currentTarget).parents("form");
+				var withinForm = containerForm.length > 0;
+				
+				if ( withinForm ) {
+					containerForm.find("input[name='"+name+"']").next('.custom-radiobutton-display').removeClass('custom-radiobutton-checked');
+				}
+				else {
+					$("input[name='"+name+"']").filter( function() { return $(this).parents("form").length < 1; } ).next('.custom-radiobutton-display').removeClass('custom-radiobutton-checked');
+				}
+				
+				radiobutton.next('.custom-radiobutton-display').addClass("custom-radiobutton-checked");
 
-				$("input[name='"+name+"']").next('.custom-radiobutton-display').removeClass('checked');
-				radiobutton.next('.custom-radiobutton-display').addClass("checked");
-
+			});
+			
+			//Make reset button aware of the custom checkboxes
+			var form = $(v).parents("form");
+			var reset = form.find("input[type='reset']");
+			reset.each( function(ri,rv) {
+				jQuery(rv).click( function() {
+					form.find(".custom-radiobutton-display").removeClass("custom-radiobutton-checked");
+					form.find(".custom-radiobutton-display.custom-radiobutton-checked-default").addClass("custom-radiobutton-checked");
+				});
 			});
 
 		});

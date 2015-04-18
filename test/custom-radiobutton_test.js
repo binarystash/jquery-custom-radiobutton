@@ -40,16 +40,16 @@
     strictEqual($('.custom-radiobutton-display').length, 3, 'should create dummies');
   });
 
-  test('add/remove "checked"', function() {
+  test('add/remove "custom-radiobutton-checked"', function() {
     expect(2);
     
     this.elems.customRadiobutton();
 
     $('.custom-radiobutton').eq(0).trigger('click');
-    strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(0).hasClass("checked"), true, 'should add "checked" to dummy 1');
+    strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(0).hasClass("custom-radiobutton-checked"), true, 'should add "custom-radiobutton-checked" to dummy 1');
 
     $('#qunit-fixture label').eq(1).trigger('click');
-    strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(0).hasClass("checked"), true, 'should remove "checked" from dummy 1');
+    strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(0).hasClass("custom-radiobutton-checked"), true, 'should remove "custom-radiobutton-checked" from dummy 1');
   });
 
   test('recognize "check" attribute', function() {
@@ -57,9 +57,9 @@
     
     this.elems.customRadiobutton();
 
-    strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(0).hasClass("checked"), false, 'must not be checked');
-	strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(1).hasClass("checked"), false, 'must not be checked');
-	strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(2).hasClass("checked"), true, 'must be checked');
+    strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(0).hasClass("custom-radiobutton-checked"), false, 'must not be checked');
+	strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(1).hasClass("custom-radiobutton-checked"), false, 'must not be checked');
+	strictEqual($("#qunit-fixture .custom-radiobutton-display").eq(2).hasClass("custom-radiobutton-checked"), true, 'must be checked');
   });
 
 }(jQuery));

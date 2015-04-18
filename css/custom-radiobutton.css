@@ -20,6 +20,6 @@
 	height:18px;
 }
 
-.custom-radiobutton-display.checked:before {
+.custom-radiobutton-display.custom-radiobutton-checked:before {
 	background:url("../images/radio-checked.png") center 0 no-repeat;
 }
