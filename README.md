@@ -2,7 +2,7 @@
 
 # Custom Radiobutton
 
-Custom Radiobutton is a jQuery plugin for customizing the appearance of radiobuttons.
+Custom Radiobutton is a jQuery plugin for customizing the appearance of radio buttons.
 
 ## Demo
 
