@@ -55,10 +55,13 @@
 			var form = $(v).parents("form");
 			var reset = form.find("input[type='reset']");
 			reset.each( function(ri,rv) {
-				jQuery(rv).click( function() {
-					form.find(".custom-radiobutton-display").removeClass("custom-radiobutton-checked");
-					form.find(".custom-radiobutton-display.custom-radiobutton-checked-default").addClass("custom-radiobutton-checked");
-				});
+				if ( !$(rv).hasClass("custom-checkbox-aware") ) {
+					$(rv).addClass("custom-checkbox-aware");
+					$(rv).click( function() {
+						form.find(".custom-radiobutton-display").removeClass("custom-radiobutton-checked");
+						form.find(".custom-radiobutton-display.custom-radiobutton-checked-default").addClass("custom-radiobutton-checked");
+					});
+				}
 			});
 
 		});
