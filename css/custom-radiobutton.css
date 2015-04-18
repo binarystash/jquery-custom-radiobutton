@@ -6,16 +6,20 @@
 	display:inline-block;
 	margin:0 5px;
 	cursor:pointer;
+	font-size:0;
+	width:18px;
+	height:18px;
+	vertical-align:middle;
+	background:url("../images/radio-bg.png") center 0 no-repeat;
 }
 
 .custom-radiobutton-display:before {
-	content:'\25CF';
-	color:#C2C2C2;
-	font-size:20px;
-	text-shadow:#545454 1px 1px 2px;
+	content:' ';
+	display:inline-block;
+	width:18px;
+	height:18px;
 }
 
 .custom-radiobutton-display.checked:before {
-	content:'\25CF ';
-	color:#e7a61a;
+	background:url("../images/radio-checked.png") center 0 no-repeat;
 }
