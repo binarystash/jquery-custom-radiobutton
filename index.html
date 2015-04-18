@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>jQuery Custom Radiobutton</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"/>
+		<link rel="stylesheet" href="https://rawgit.com/binarystash/jquery-custom-radiobutton/master/css/custom-radiobutton.css"/>
+		
+        <link rel="stylesheet" href="css/normalize.min.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+
+		<div id="showcase-section" class="outer">
+			<div class="inner">
+				<h1>jQuery Custom Radiobutton</h1>
+				<p style="text-align:center">Customize the appearance of HTML radiobuttons</p>
+				<h3 style="text-align:center">Demo</h3>
+				<form class="demo-form" action="#" method="GET">
+					<fieldset>
+						<div>
+							<input name="number" type="radio" id="first"/><label for="first">Sample 1 (input beside label; label with ID)</label><br/>
+						</div>
+						<div>
+							<label><input name="number" id="second" type="radio"/>Sample 2 (input inside label)</label><br/>
+						</div>
+						<div>
+							<input name="number" id="third" type="radio"/><label>Sample 3 (input beside label; label without ID)</label>
+						</div>
+						<div class="control">
+							<input type="reset" value="Reset"/>
+							<input type="reset" value="Submit"/>
+						</div>
+					</fieldset>
+				</form>
+				<h3>Getting started</h3>
+				<ol>
+					<li><p><a href="https://github.com/binarystash/jquery-custom-radiobutton/archive/master.zip">Download</a> the latest version.</p></li>
+					<li>
+						<p>Include the following.</p>
+						<pre><code class="html">&lt;script src=&quot;dist/custom-radiobutton.min.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/custom-radiobutton.css&quot;/&gt;</code></pre>
+					</li>
+					<li>
+						<p>Style checkboxes away.</p>
+						<pre><code class="javascript">jQuery(&#39;input[type=&quot;radio&quot;]&#39;).customRadiobutton();</code></pre>
+					</li>
+				</ol>
+			</div>
+		</div>
+		<div id="showcase-buttons" class="outer">
+			<div class="inner">
+				<a class="button" target="_blank" href="https://github.com/binarystash/jquery-custom-radiobutton"><i class="fa fa-plus-square-o fa-2x"></i>Read More</a>
+				<a class="button" href="https://github.com/binarystash/jquery-custom-radiobutton/archive/master.zip"><i class="fa fa-download fa-2x"></i>Download Now</a>
+			</div>
+		</div>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+		<script type="text/javascript" src="https://rawgit.com/binarystash/jquery-custom-radiobutton/master/dist/jquery.custom-radiobutton.min.js"></script>
+		
+		<script src="js/main.js"></script>
+    
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+	</body>
+</html>
