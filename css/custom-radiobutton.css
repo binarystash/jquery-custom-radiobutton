@@ -1,5 +1,8 @@
 .custom-radiobutton {
-	display:none;
+	opacity:0;
+	filter:alpha(opacity=0);
+	left:-9999px;
+	position:absolute;
 }
 
 .custom-radiobutton-display {
@@ -8,6 +11,8 @@
 	cursor:pointer;
 	font-size:0;
 	width:18px;
+	position:relative;
+	z-index:2;
 	height:18px;
 	vertical-align:middle;
 	background:url("../images/radio-bg.png") center 0 no-repeat;

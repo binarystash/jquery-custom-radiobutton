@@ -1,4 +1,4 @@
-/*! custom-radiobutton - v1.0.1 - 2015-06-09
+/*! custom-radiobutton - v1.0.1 - 2015-06-14
 * http://www.binarystash.net/jquery-custom-radiobutton/
 * Copyright (c) 2015 BinaryStash; Licensed MIT */
 (function ($) {
